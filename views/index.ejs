@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <h4><a href="/new">Add a New Post</a></h4>
+
+        <% messages.forEach(message => { %>
+        <div class="message-div">
+            <h3><%= message.text %></h3>
+            <p>
+                Created by: <i><%= message.user %></i> at <%=
+                message.added.toLocaleTimeString() %>
+            </p>
+        </div>
+        <% }) %>
+    </body>
+</html>
